@@ -1,0 +1,25 @@
+[project]
+name = "sql-advisor"
+version = "0.1.0"
+description = "SQL AI分析助手"
+readme = "README.md"
+authors = [
+    { name = "李文齐", email = "liwenqikeep@foxmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.162.0",
+    "httpx>=0.28.1",
+    "openai>=3.42.1",
+    "pydantic>=2.14.2",
+    "pytest>=9.2.0",
+    "python-dotenv>=1.2.4",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+sql-advisor = "sql_advisor:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
